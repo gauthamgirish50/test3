@@ -24,9 +24,13 @@ pipeline {
                        echo"this is test3"
             }
           }
+               stage ('TEST4') {
+                     steps {
+                       echo"this is test4"
         }
       }
-
+    }
+  }
                    stage ('DEPLOY') {
                     steps {
                      echo "This is deploy stage"
