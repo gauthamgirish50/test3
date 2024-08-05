@@ -21,9 +21,9 @@ pipeline {
                        sh 'sleep 5'
                  }
               }
-                  stage ('TEST2') {
+                  stage ('TEST4') {
                      steps {
-                       echo"this is test2"
+                       echo"this is test4"
                        sh 'sleep 5'
                  }
                }
