@@ -1,43 +1,44 @@
 pipeline {
-  agent none;
+  agent any;
   stages {
     stage ('BUILD') {
       steps {
            echo "This is build stage"
+           sh 'sleep 5'
          }
        }  
-
-                stage ('TEST') {
+               stage ('TEST') {
                   parallel {
                     stage('TEST1') {
                       steps {
                         echo"this is test1"
+                        sh 'sleep 5'
                  }
               }
                   stage ('TEST2') {
                      steps {
-                       echo"this is test2"     
-                }
-              } 
-                stage ('TEST3') {
+                       echo"this is test2"
+                       sh 'sleep 5'
+                 }
+              }
+                  stage ('TEST2') {
                      steps {
-                       echo"this is test3"
-            }
-          }
-               stage ('TEST4') {
-                     steps {
-                       echo"this is test4"
-        }
-      }
-    }
-  }
-                   stage ('DEPLOY') {
+                       echo"this is test2"
+                       sh 'sleep 5'
+                 }
+               }
+              }
+             }
+                  stage ('DEPLOY') {
                     steps {
                      echo "This is deploy stage"
+                     sh 'sleep 5'
               }
             } 
           } 
         }
+      
+     
       
 
     
